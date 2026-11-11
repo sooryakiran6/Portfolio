@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="void">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume &bull; SOORYA KIRAN &bull; Fashion Communication &amp; Visual Storyteller</title>
+  <meta name="description" content="Official Curriculum Vitae of Soorya Kiran. Fashion Communication designer, visual storyteller, and art director. NIFT Kannur.">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
+  <link rel="shortcut icon" href="favicon.ico?v=2">
+
+  <!-- Scoped Resume Page Styles -->
+  <style>
+    /* Noise and Background */
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Resume Shell Container */
+    .resume-shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 7rem 1.5rem 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Sticky Sub-Header Actions Bar */
+    .resume-nav-bar {
+      position: fixed;
+      top: 1.25rem;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      pointer-events: none;
+    }
+    .resume-nav-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--space-unit);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .resume-nav-left, .resume-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      pointer-events: auto;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.15rem;
+      background: var(--glass-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-full);
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      transition: transform 0.4s var(--ease-out-elastic), background-color 0.25s ease, border-color 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px) scale(1.04);
+      background-color: var(--accent-primary);
+      color: #000;
+      border-color: var(--accent-primary);
+    }
+
+    .download-pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 1.35rem;
+      background-color: var(--accent-primary);
+      color: #000000;
+      border-radius: var(--radius-full);
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: -0.01em;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.5s var(--ease-elastic), box-shadow 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .download-pdf-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--shadow-pop);
+    }
+    .download-pdf-btn:active {
+      transform: scale(0.96);
+    }
+    .download-pdf-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+    .download-pdf-btn .file-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: rgba(0, 0, 0, 0.15);
+      padding: 0.15rem 0.45rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Resume Hero Header */
+    .resume-hero-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      padding: clamp(2rem, 4vw, 3.5rem);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .resume-hero-box::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .resume-hud-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .resume-hud-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .resume-hud-meta span strong {
+      color: var(--accent-primary);
+    }
+
+    .resume-main-name {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6.5vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+    .resume-main-role {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+
+    .resume-contact-ribbon {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+    .resume-contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-primary);
+      transition: color 0.2s ease, transform 0.3s ease;
+    }
+    .resume-contact-link:hover {
+      color: var(--accent-primary);
+      transform: translateY(-2px);
+    }
+    .resume-contact-link svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent-primary);
+    }
+
+    /* Tab Switcher Controls */
+    .resume-tab-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .resume-tab-group {
+      display: inline-flex;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-full);
+      padding: 0.3rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .resume-tab-btn {
+      padding: 0.55rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .resume-tab-btn.active {
+      background-color: var(--accent-primary);
+      color: #000000;
+      box-shadow: var(--shadow-sm);
+    }
+    .resume-tab-btn:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    /* Main Resume Sections Layout */
+    .resume-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.3s ease;
+    }
+    .resume-card:hover {
+      border-color: var(--border-strong);
+    }
+
+    .resume-card-title {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .resume-card-title .sec-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      background: var(--tag-bg);
+      border: 1px solid var(--border-color);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+    }
+
+    .resume-summary-text {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    /* Timeline & Experience Items */
+    .timeline-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      border-left: 2px solid var(--border-color);
+      transition: border-color 0.3s ease;
+    }
+    .timeline-item:hover {
+      border-left-color: var(--accent-primary);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0.35rem;
+      left: -7px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      box-shadow: 0 0 0 4px var(--bg-card);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-role {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text-primary);
+    }
+    .timeline-org {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.6rem;
+    }
+    .timeline-meta {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background: var(--bg-secondary);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+    }
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .timeline-bullets li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+
+    /* Projects Grid in Resume */
+    .resume-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-resume-box {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: transform 0.4s var(--ease-elastic), border-color 0.3s ease;
+    }
+    .project-resume-box:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-primary);
+    }
+    .project-resume-title {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+    .project-resume-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .project-resume-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Skills Clusters */
+    .skills-cluster-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .skill-category-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.05em;
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .skill-pill {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-full);
+      color: var(--text-primary);
+      transition: transform 0.3s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .skill-pill:hover {
+      transform: translateY(-2px) scale(1.05);
+      border-color: var(--accent-primary);
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+    }
+    .skill-pill.highlight {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    /* PDF Viewer Frame View */
+    .pdf-viewer-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-pop);
+      margin-bottom: 2.5rem;
+    }
+    .pdf-viewer-bar {
+      padding: 0.9rem 1.5rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+    .pdf-frame-element {
+      width: 100%;
+      height: 900px;
+      border: none;
+      display: block;
+      background: #323639;
+    }
+
+    /* Print Formatting */
+    @media print {
+      .resume-nav-bar, .resume-tab-bar, .radial-palette-widget, .download-banner, .footer-contact-cta {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .resume-shell {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .resume-hero-box, .resume-card {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+      }
+      .timeline-bullets, .resume-summary-text, .project-resume-desc {
+        color: #333 !important;
+      }
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 768px) {
+      .resume-shell {
+        padding-top: 5.5rem;
+      }
+      .pdf-frame-element {
+        height: 600px;
+      }
+      .timeline-item {
+        padding-left: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tactile Analog Noise Overlay -->
+  <div class="noise-overlay"></div>
+  <div class="dot-grid-bg"></div>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="resume-nav-bar">
+    <div class="resume-nav-inner">
+      <div class="resume-nav-left">
+        <a href="index.html" class="back-btn" title="Return to Main Portfolio">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>BACK TO PORTFOLIO</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Resume Content Shell -->
+  <main class="resume-shell">
+
+    <!-- Hero Identity Box -->
+    <header class="resume-hero-box">
+      <div class="resume-hud-meta">
+        <span>STATUS: <strong>AVAILABLE FOR 2026 COMMISSIONS &amp; ROLES</strong></span>
+        <span>•</span>
+        <span>LOCATION: <strong>VADAKARA, KERALA, INDIA</strong></span>
+        <span>•</span>
+        <span>INSTITUTION: <strong>NIFT KANNUR [CGPA 8.7/10]</strong></span>
+      </div>
+
+      <h1 class="resume-main-name">SOORYA KIRAN</h1>
+      <p class="resume-main-role">Fashion Communication Designer &bull; Visual Storyteller &bull; Art Director</p>
+
+      <div class="resume-contact-ribbon">
+        <a href="mailto:sooryakiran605@gmail.com" class="resume-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>sooryakiran605@gmail.com</span>
+        </a>
+        <a href="tel:+916238829602" class="resume-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+91-6238829602</span>
+        </a>
+        <a href="https://www.behance.net/sooryakiran4" target="_blank" rel="noopener noreferrer" class="resume-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path><path d="M3 12h4.5"></path><path d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"></path><path d="M16 6l3 0"></path></svg>
+          <span>behance.net/sooryakiran4</span>
+        </a>
+        <a href="https://www.linkedin.com/in/soorya-kiran-b377363bb?trk=contact-info" target="_blank" rel="noopener noreferrer" class="resume-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <span>linkedin.com/in/soorya-kiran</span>
+        </a>
+        <a href="https://www.instagram.com/su6yaaa?psln=b3o4cnlhNW5reWl0&utm_source=qr" target="_blank" rel="noopener noreferrer" class="resume-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <span>@su6yaaa</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Interactive View Tabs Controller -->
+    <div class="resume-tab-bar">
+      <div class="resume-tab-group">
+        <button class="resume-tab-btn active" id="tabWebBtn" onclick="switchResumeTab('web')">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          <span>INTERACTIVE CV</span>
+        </button>
+        <button class="resume-tab-btn" id="tabPdfBtn" onclick="switchResumeTab('pdf')">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>EMBEDDED PDF VIEWER</span>
+        </button>
+      </div>
+
+      <a href="resume.pdf" download="Soorya_Kiran_Resume.pdf" class="download-pdf-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>DOWNLOAD PDF FILE</span>
+      </a>
+    </div>
+
+    <!-- ======================================================================
+         VIEW 1: INTERACTIVE WEB CV
+         ====================================================================== -->
+    <div id="interactiveCvView">
+
+      <!-- 1. Professional Summary -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">01</span>
+          <span>PROFESSIONAL SUMMARY</span>
+        </h2>
+        <p class="resume-summary-text">
+          Fashion Communication designer and visual storyteller with hands-on experience in illustration, storyboard development, editorial design, brand identity, video production, and creative direction. Adept at interpreting conceptual briefs and translating them into compelling imagery across graphic design, animation, and digital media platforms. Proficient in industry-standard tools including Adobe Creative Suite and Procreate, with additional expertise in 3D spatial design. Brings a research-driven methodology and strong conceptual judgment to produce thoughtful, high-impact communication work.
+        </p>
+      </section>
+
+      <!-- 2. Education Card -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">02</span>
+          <span>EDUCATION &amp; ACADEMICS</span>
+        </h2>
+        <div class="timeline-wrap">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">National Institute of Fashion Technology (NIFT)</h3>
+                <div class="timeline-org">Bachelor of Design (B.Des.) in Fashion Communication &bull; Minor: Master of Design</div>
+              </div>
+              <span class="timeline-meta">2023 – 2027 &bull; KANNUR, KERALA</span>
+            </div>
+            <p style="font-family: var(--font-headline); font-weight: 700; color: var(--accent-primary); margin-bottom: 0.6rem;">
+              Cumulative GPA: 8.7 / 10.0
+            </p>
+            <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+              <strong>Relevant Coursework:</strong> Digital Storytelling, Typography, Layout Composition, Media Production, Set Design, 3D Modeling, Color Theory, Semiotics and Letterforms, Moving Image &amp; Video Editing, Store Experience Design, Sensory &amp; Virtual Experience (UX), Branding and Promotion, Publication Design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Work Experience & Leadership -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">03</span>
+          <span>EXPERIENCE &amp; CREATIVE LEADERSHIP</span>
+        </h2>
+        <div class="timeline-wrap">
+
+          <!-- Curious Cat Ideas -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Illustration Intern</h3>
+                <div class="timeline-org">Curious Cat Ideas &bull; Kozhikode</div>
+              </div>
+              <span class="timeline-meta">JUN – JUL 2026</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Completed an intensive eight-week internship contributing to the Walkkaro Walkathon campaign.</li>
+              <li>Developed the campaign’s key visual artwork, with illustration serving as the primary visual communication approach across digital and print collateral.</li>
+            </ul>
+          </div>
+
+          <!-- NIFT Kannur: One Way Vision Project -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Head Illustrator &bull; One Way Vision Project 2025</h3>
+                <div class="timeline-org">NIFT Kannur Campus Installation</div>
+              </div>
+              <span class="timeline-meta">SEPT 2025 &bull; ON-SITE</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led a team of three illustrators in developing large-scale artwork for the campus gate entrance glass panels.</li>
+              <li>Generated three distinct visual concepts, each tailored to its individual pane while sustaining a unified aesthetic language across the full installation.</li>
+              <li>Executed and refined all artwork in Procreate, ensuring precision, consistency, and print-ready digital output.</li>
+            </ul>
+          </div>
+
+          <!-- NIFT Kannur: Floor Interior Redesign -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Design Team Head &bull; Floor Interior Redesign</h3>
+                <div class="timeline-org">NIFT Kannur Department Transformation</div>
+              </div>
+              <span class="timeline-meta">DEC 2024 &bull; ON-SITE</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Directed the end-to-end spatial transformation of an entire department floor, covering the main lobby, corridor, and eight individual functional rooms.</li>
+              <li>Coordinated a cross-functional creative team of 25 members, managing task allocation, workflow sequencing, and timely delivery.</li>
+              <li>Established the overarching design framework to maintain spatial consistency, functionality, and a cohesive aesthetic across all zones.</li>
+            </ul>
+          </div>
+
+          <!-- Spectrum Promotional Video -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Promotional Video Director &bull; Spectrum Annual Fest</h3>
+                <div class="timeline-org">NIFT Kannur Flagship Event</div>
+              </div>
+              <span class="timeline-meta">MARCH 2025 &bull; ON-SITE</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Conceptualized and produced the promotional campaign video for Spectrum, NIFT's flagship annual cultural festival.</li>
+              <li>Structured the creative arc through shot planning, composition design, and detailed storyboarding to keep every frame aligned with the event’s brand identity.</li>
+              <li>Managed the full production pipeline, from on-location filming through editing, motion graphics, and post-production delivery.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. Featured Projects -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">04</span>
+          <span>KEY PROJECTS &amp; DESIGN CASE STUDIES</span>
+        </h2>
+        <div class="resume-projects-grid">
+
+          <div class="project-resume-box">
+            <h3 class="project-resume-title">Suthanthara Paravaikal</h3>
+            <div class="project-resume-date">CRD DOCUMENTATION &bull; JUN 2025</div>
+            <p class="project-resume-desc">
+              Authored and illustrated a comprehensive coffee table book preserving the heritage and socio-cultural fabric of the Eravathody weaving community.
+            </p>
+            <ul class="timeline-bullets" style="font-size: 0.88rem;">
+              <li>Conducted firsthand field research across weaver settlements, capturing personal interviews and rich video documentation.</li>
+              <li>Assembled the complete publication in Procreate and Adobe InDesign to merge immersive illustration with refined editorial layout.</li>
+            </ul>
+          </div>
+
+          <div class="project-resume-box">
+            <h3 class="project-resume-title">3D VHS/DVD Video Rental Store</h3>
+            <div class="project-resume-date">SPATIAL CONCEPT &bull; NOV 2025</div>
+            <p class="project-resume-desc">
+              Built a fully realized 3D retail store concept for an avant-garde DVD and VHS rental experience using Autodesk Fusion 360.
+            </p>
+            <ul class="timeline-bullets" style="font-size: 0.88rem;">
+              <li>Modeled the building envelope in the form of an oversized VHS cassette, drawing architectural inspiration from vintage Blockbuster stores.</li>
+              <li>Designed the floor plan around dedicated display racks and a private screening room, prioritizing visitor flow and tactile engagement.</li>
+            </ul>
+          </div>
+
+          <div class="project-resume-box">
+            <h3 class="project-resume-title">The Drip Codex</h3>
+            <div class="project-resume-date">EDITORIAL GLOSSARY &bull; APR 2025</div>
+            <p class="project-resume-desc">
+              Researched and compiled a comprehensive illustrated glossary mapping Gen Z clothing culture, accessories, and emerging youth style trends.
+            </p>
+            <ul class="timeline-bullets" style="font-size: 0.88rem;">
+              <li>Integrated original hand-drawn illustrations with modular editorial layouts to produce a visually unified reference publication.</li>
+            </ul>
+          </div>
+
+          <div class="project-resume-box">
+            <h3 class="project-resume-title">AD Filmmaking &bull; PUMA Footwear</h3>
+            <div class="project-resume-date">CAMPAIGN RECREATION &bull; DEC 2025</div>
+            <p class="project-resume-desc">
+              Led a four-member production team in recreating a high-octane Puma footwear advertisement from pre-production through final cut.
+            </p>
+            <ul class="timeline-bullets" style="font-size: 0.88rem;">
+              <li>Developed shot-by-shot storyboards and script to establish tonal consistency and brand precision.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 5. Technical Skills Matrix -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">05</span>
+          <span>TECHNICAL SKILLS &amp; CAPABILITIES</span>
+        </h2>
+        <div class="skills-cluster-wrap">
+
+          <div>
+            <div class="skill-category-title">Core Competencies</div>
+            <div class="skill-pills">
+              <span class="skill-pill highlight">Illustration</span>
+              <span class="skill-pill highlight">Storyboard Development</span>
+              <span class="skill-pill highlight">Brand Identity</span>
+              <span class="skill-pill highlight">Typography &amp; Lettering</span>
+              <span class="skill-pill">Editorial &amp; Book Design</span>
+              <span class="skill-pill">Layout Composition</span>
+              <span class="skill-pill">Art Direction</span>
+              <span class="skill-pill">UI/UX Design</span>
+              <span class="skill-pill">Photography</span>
+              <span class="skill-pill">Poster Design</span>
+              <span class="skill-pill">Animation</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Design &amp; Visual Tools</div>
+            <div class="skill-pills">
+              <span class="skill-pill highlight">Adobe Photoshop</span>
+              <span class="skill-pill highlight">Adobe Illustrator</span>
+              <span class="skill-pill highlight">Adobe InDesign</span>
+              <span class="skill-pill highlight">Procreate</span>
+              <span class="skill-pill">Canva</span>
+              <span class="skill-pill">Adobe Lightroom</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Video, 3D &amp; Digital Media</div>
+            <div class="skill-pills">
+              <span class="skill-pill highlight">Adobe Premiere Pro</span>
+              <span class="skill-pill highlight">Adobe After Effects</span>
+              <span class="skill-pill highlight">Autodesk Fusion 360</span>
+              <span class="skill-pill">3D Spatial Planning</span>
+              <span class="skill-pill">Exhibition Design</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Soft Skills &amp; Communication</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Creative Direction</span>
+              <span class="skill-pill">Problem-Solving</span>
+              <span class="skill-pill">Attention to Detail</span>
+              <span class="skill-pill">Cross-Functional Team Collaboration</span>
+              <span class="skill-pill">Project &amp; Time Management</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-category-title">Languages</div>
+            <div class="skill-pills">
+              <span class="skill-pill">English (Fluent)</span>
+              <span class="skill-pill">Malayalam (Native)</span>
+              <span class="skill-pill">Hindi (Intermediate)</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. Achievements & Workshops -->
+      <section class="resume-card">
+        <h2 class="resume-card-title">
+          <span class="sec-badge">06</span>
+          <span>ACHIEVEMENTS, HONORS &amp; WORKSHOPS</span>
+        </h2>
+        <div class="timeline-wrap">
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3 class="timeline-role">NIFT All India Entrance Exam 2023 &bull; AIR 965</h3>
+              <span class="timeline-meta">NATIONAL RANKING</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Ranked in the <strong>Top 5%</strong> among 23,000+ applicants nationwide in the General Category.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Spectrum Graffiti Competition &bull; 1st Prize Winner</h3>
+              <span class="timeline-meta">CONSECUTIVE YEARS: 2025 &amp; 2026</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Won first place in consecutive years (2nd and 3rd year), serving as a core member of the live installation design team and leading concept-to-execution delivery.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Master Calligraphy Workshop &bull; Narayana Bhattathiri</h3>
+              <span class="timeline-meta">SPECIALIZED TRAINING</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Completed an intensive masterclass in traditional and expressive calligraphy under the guidance of renowned master calligrapher Narayana Bhattathiri, deepening hand-lettering and typographic sensitivity.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3 class="timeline-role">Converge 2025 &bull; National Short Film Competition</h3>
+              <span class="timeline-meta">FILM PRODUCTION</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Competed in the national-level Converge 2025 Short Film Competition representing NIFT Kannur.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ======================================================================
+         VIEW 2: EMBEDDED PDF VIEWER
+         ====================================================================== -->
+    <div id="pdfEmbedView" style="display: none;">
+      <div class="pdf-viewer-card">
+        <div class="pdf-viewer-bar">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
+            <span>DOCUMENT: <strong>resume.pdf</strong> (2 PAGES &bull; 148 KB)</span>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="resume.pdf" download="Soorya_Kiran_Resume.pdf" class="download-pdf-btn" style="padding: 0.35rem 0.9rem; font-size: 0.78rem;">
+              <span>SAVE PDF</span>
+            </a>
+            <a href="resume.pdf" target="_blank" rel="noopener" class="back-btn" style="padding: 0.35rem 0.9rem; font-size: 0.78rem;">
+              <span>FULLSCREEN ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <iframe src="resume.pdf#toolbar=1&navpanes=0" class="pdf-frame-element" title="Soorya Kiran PDF Resume">
+          <p>Your browser does not support embedded PDF viewing. 
+            <a href="resume.pdf" download style="color: var(--accent-primary);">Click here to download the PDF</a>.
+          </p>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Bottom Back to Portfolio Action -->
+    <div style="text-align: center; margin-top: 3.5rem; margin-bottom: 2rem;">
+      <a href="index.html" class="back-btn" style="padding: 0.85rem 2.2rem; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.6rem;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>BACK TO PORTFOLIO</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Synchronize Theme from Portfolio LocalStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      const storedTheme = localStorage.getItem('portfolio_theme') || 'void';
+      document.documentElement.setAttribute('data-theme', storedTheme);
+    });
+
+    // Tab Switching Function
+    function switchResumeTab(tab) {
+      const webView = document.getElementById('interactiveCvView');
+      const pdfView = document.getElementById('pdfEmbedView');
+      const tabWebBtn = document.getElementById('tabWebBtn');
+      const tabPdfBtn = document.getElementById('tabPdfBtn');
+
+      if (tab === 'web') {
+        webView.style.display = 'block';
+        pdfView.style.display = 'none';
+        tabWebBtn.classList.add('active');
+        tabPdfBtn.classList.remove('active');
+      } else {
+        webView.style.display = 'none';
+        pdfView.style.display = 'block';
+        tabWebBtn.classList.remove('active');
+        tabPdfBtn.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
